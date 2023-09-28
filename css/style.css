@@ -1,0 +1,119 @@
+/* font-family: 'Croissant One', cursive;
+font-family: 'Roboto', sans-serif; */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Croissant One', cursive;
+  scroll-behavior: smooth;
+}
+@media (max-width:338px) {
+  .my_que_button {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center;
+    align-self: center;
+  }
+  .my_button {
+    margin: 10px 0 !important;
+    margin-right: 0 !important;
+  }
+}
+.main-title {
+  text-transform: uppercase;
+  margin: 0 auto 80px;
+  border: 2px solid black;
+  padding: 10px 20px;
+  font-size: 30px;
+  width: fit-content;
+  position: relative;
+  z-index: 1;
+  transition: 0.3s;
+  border-radius: 10px;
+}
+.main-title::before,
+.main-title::after {
+  content: "";
+  width: 12px;
+  height: 12px;
+  background-color: #dc3545;
+  position: absolute;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.main-title::before {
+  left: -30px;
+}
+.main-title::after {
+  right: -30px;
+}
+.main-title:hover::before {
+  z-index: -1;
+  animation: left-move 0.5s linear forwards;
+}
+.main-title:hover::after {
+  z-index: -1;
+  animation: right-move 0.5s linear forwards;
+}
+.main-title:hover {
+  color: white;
+  border: 2px solid white;
+  transition-delay: 0.5s;
+  border-radius: 10px;
+}
+@keyframes left-move {
+  50% {
+    left: 0;
+    width: 12px;
+    height: 12px;
+  }
+  100% {
+    left: 0;
+    border-radius: 10px;
+    width: 55%;
+    height: 100%;
+  }
+}
+@keyframes right-move {
+  50% {
+    right: 0;
+    width: 12px;
+    height: 12px;
+  }
+  100% {
+    right: 0;
+    border-radius: 10px;
+    width: 55%;
+    height: 100%;
+  }
+}
+
+@media (max-width:767px) {
+  .my_quere {
+    text-align: center;
+  }
+}
+
+.my_outLine:focus {
+  border-color: #dc3545 !important;
+  box-shadow: 0 0 0 0.25rem #fdbac1 !important;
+}
+
+.my_hover:hover {
+  color: #dc3545 !important;
+}
+
+@media (max-width:767px) {
+  .footer {
+    text-align: center;
+  }
+}
+.bg_Mine {
+  background-color: #F8F8FF !important;
+}
+
+@media (max-width: 380px) {
+  .My_own_size {
+    font-size: 14px !important;
+  }
+}
